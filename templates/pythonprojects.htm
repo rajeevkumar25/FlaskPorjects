@@ -1,0 +1,46 @@
+{% extends "bootstrap/base.html" %}{% block content %}
+    <h2> Welcome to Freelance Python Projects </Head></h2>
+    Source: Upwork.com/Freelancer.com
+    <p><b>Date: <span id="datetime"></b><script> document.write(new Date().toLocaleDateString()); </script></span> </p>
+    
+    <h4 align='right'><a href='home'>Home</a></h4>
+    <form
+      class="navbar-form navbar-left"
+      name="pyprojectform"
+      method="POST"
+      role="search"
+      action="#"
+    >
+    <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="txttechsearch"
+          placeholder="Python,Selenium, Web Scraping"
+        />
+        <input type="radio" class="custom-control-input" id="upworkradio" name="prjpython" value="upwork">
+        <label class="custom-control-label" for="defaultInline1">Upwork </label>
+      
+        <input type="radio" class="custom-control-input" id="freelanceradio" name="prjpython" value="freelancer">
+        <label class="custom-control-label" for="defaultInline2"> Freelancer</label>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+    <table class="table table-hover">
+        {% for result in results %}
+          
+          <tr>
+            <td ><b><a href="{{results[result]}}">{{result}}</a></b></td>
+            
+            
+          </tr>
+            
+        {% endfor %}
+      </table>
+  
+</form>
+    
+
+    {% endblock %}
+    
+    

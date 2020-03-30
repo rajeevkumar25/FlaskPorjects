@@ -1,0 +1,41 @@
+{% extends "bootstrap/base.html" %} {% block title %} IMDB Rating {% endblock %}
+{% block content %}
+<h2>Welcome to Word Search </Head></h2>
+<h4 align='right'><a href='home'>Home</a></h4>
+<form
+  class="navbar-form navbar-left"
+  name="wordform"
+  method="POST"
+  role="search"
+  action="#"
+>
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      name="txtwordname"
+      placeholder="Word Search"
+    />
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+  <br></br>
+  <br></br>
+
+  <table class="table table-hover">
+    <tr>
+      <td align='center' class=".themed-grid-col"><b> Word Vocab  </b></td>
+    </tr>
+    <br></br>
+    <br></br>
+  
+    <table class="table table-hover">
+        <tr>    
+      {% for word in results %}
+     
+        <td class=".themed-grid-col"><i>{{word}} , </i></td>
+      
+      {% endfor %}    
+    </tr>  
+  </table>
+</form>
+{% endblock %}

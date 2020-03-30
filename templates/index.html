@@ -1,0 +1,25 @@
+{% extends "bootstrap/base.html" %}
+<html>
+  <head>
+    <title>My Portal</title>
+    {% block navbar %}
+    <div class="navbar-header">
+      <a class="navbar-brand" href="home">Weather</a>
+      <a class="navbar-brand" href="imdbrating" title="imdb.com">IMDB Rating</a>
+      <a class="navbar-brand" href="mutualfund">Mutual Fund Details</a>
+      <a class="navbar-brand" href="news" title="TOI,CNN,TechCrunch,CNBC etc."
+        >News Headlines</a
+      >
+      <a class="navbar-brand" href="books" title="goodreads.com">Books</a>
+      <a class="navbar-brand" href="words">Word Search </a>
+      <a class="navbar-brand" href="businessnews" title="moneycontrol.com"
+        >Business News
+      </a>
+      <a class="navbar-brand" href="pythonprojects">Python Projects </a>
+    </div>
+    {% endblock %}
+  </head>
+  {% block content%}
+  <body></body>
+</html>
+{% endblock %}
