@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+
+        width: 180px;
+      }
+
+      div.gallery:hover {
+        border: 5px solid #777;
+      }
+
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+      div.desc {
+        padding: 15px;
+        text-align: left;
+      }
+    </style>
+    <title>Home</title>
+  </head>
+  <body>
+    {% block content %} {% for key in characters %}
+
+    <div class="gallery">
+      <div class="desc"><b>{{ key['char_name'] }}</b></div>
+
+      <a href="/" target="_blank"><img src="{{key['char_img']}}" /></a>
+    </div>
+    {% endfor %} {% endblock %}
+  </body>
+</html>
