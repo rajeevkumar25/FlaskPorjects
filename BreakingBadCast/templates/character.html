@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Character Details</title>
+  </head>
+  <body background-color="black">
+    {% block content %}
+    <table border="1">
+      {% for key in character %}
+      <tr>
+        <td>
+          <div><b>Name</b></div>
+        </td>
+        <td><div>{{ key['name'] }}</div></td>
+      </tr>
+      <tr>
+        <td>
+          <div><b>Birthday</b></div>
+        </td>
+        <td><div>{{ key['birthday'] }}</div></td>
+      </tr>
+      <tr>
+        <td>
+          <div><b>Occupation</b></div>
+        </td>
+        <td><div>{{ key['occupation'] }}</div></td>
+      </tr>
+      <tr>
+        <td>
+          <div><b>Photo</b></div>
+        </td>
+        <td>
+          <div>
+            <img
+              src="{{ key['img'] }}"
+              width="250"
+              height="300"
+              object-fit="cover"
+            />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div><b>Nick Name</b></div>
+        </td>
+        <td><div>{{ key['nickname'] }}</div></td>
+      </tr>
+      <tr>
+        <td>
+          <div><b>Portrayed</b></div>
+        </td>
+        <td><div>{{ key['portrayed'] }}</div></td>
+      </tr>
+      {% endfor %}
+    </table>
+    <br /><br />
+    <div alingn="left"><a href="/home">Back</a></div>
+    {% endblock %}
+  </body>
+</html>
